@@ -1,0 +1,122 @@
+body {
+  background-color: #fff;
+  color: #333;
+  font: 1.2em / 1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 1em;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+ul {
+  width: 500px;
+  list-style: none;
+  padding: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 0 auto;
+
+}
+
+li {
+  position: relative;
+  width: 205px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+li + li {
+  margin-top: 10px;
+}
+
+p {
+  width: 280px;
+  color: #676666;
+  font-size: 73%;
+  line-height: 15px;
+  padding: 0;
+  margin: 0 0 7px 0;
+}
+
+samp {
+  background-color: #ededed;
+}
+
+label,
+input,
+textarea,
+button {
+  display: block;
+}
+
+label,
+input,
+textarea {
+  width: 215px;
+}
+
+input,
+textarea {
+  font-size: 85%;
+  color: inherit;
+  border: 1px solid #999999;
+  border-radius: 6px;
+  outline: none;
+}
+
+input {
+  height: 30px;
+}
+
+input + span {
+  position: relative;
+}
+
+input:required + span::after {
+  content: "required";
+  position: absolute;
+  top: -25px;
+  left: 225px;
+  font-size: 65%;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 1px 8px;
+  border-radius: 0 10px 0 10px;
+}
+
+input + span::before {
+  position: absolute;
+  top: -28px;
+  left: 192px;
+}
+
+input:invalid + span::before {
+  content: "✖";
+  color: red;
+}
+
+input:valid + span::before {
+  content: "✓";
+  color: green;
+}
+
+input:invalid,
+textarea:invalid {
+  box-shadow: 0px 0px 4px red;
+}
+
+textarea {
+  resize: none;
+  height: 50px;
+}
+
+button {
+  margin: 0 auto;
+}

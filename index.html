@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form validation: Task 2</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <form>
+      <h2>Enter your support query</h2>
+      <ul>
+        <li>
+          <label for="uname">User name:</label>
+          <p>
+            Minimum 5 &amp; maximum 20 letters with dot after first letter.
+            Example: <samp>v.kolesnikov</samp>.
+          </p>
+          <input type="text"
+                 name="uname" id="uname"
+                 pattern="^[a-z]\.[a-z]{3,}$"
+                 minlength="5"
+                 maxlength="20"
+                 required>
+          <span></span>
+        </li>
+        <li>
+          <label for="email">Email address:</label>
+          <p>
+            Your email must have @bigcorp.eu in the end.
+            Example: <samp>v.kolesnikov@bigcorp.eu</samp>.
+          </p>
+          <input type="email"
+                 name="email"
+                 id="email"
+                 pattern="^([a-zA-Z]+|\d+)\.?([a-zA-Z]+|\d+)?@bigcorp\.eu$"
+                 required>
+          <span></span>
+        </li>
+        <li>
+          <label for="phone">Phone number:</label>
+          <p>
+            Maximum 10 numbers.<br>
+            Example: <samp>9001234455</samp>.
+          </p>
+          <input type="tel"
+                 name="phone"
+                 id="phone"
+                 pattern="^\d{10}|\d{3}([\s\-\.])\d{3}\1\d{4}$"
+                 required>
+          <span></span>
+        </li>
+        <li>
+          <label for="comment">Comment:</label>
+          <p>
+            Maximum 200 letters.
+          </p>
+          <textarea name="comment" id="comment" required maxlength="200"></textarea>
+          <span></span>
+        </li>
+        <li>
+          <button>Submit</button>
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>
